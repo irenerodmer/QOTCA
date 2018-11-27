@@ -1,0 +1,46 @@
+.color-info {
+  border: 5px solid black;
+}
+#about_blue {
+  background-color: #6495ed;
+}
+#about_yellow {
+  background-color: #FFEBCD;
+}
+#about_blue ul li {
+  color:blue;
+}
+#about_yellow ul li {
+  color: orange;
+}
+.important {
+  font-size: 16px;
+  font-weight: bold;
+}
+.nav li {
+  background-color: red;
+  color: white;
+}
+header {
+    text-align: center;
+    background: url('./road.jpeg');
+    background-size: cover;
+    color: white;
+  }
+  a {
+    color: white;
+  }
+  h1 {
+    font-size: 70px;
+    }
+  img {
+    border: 7px solid white;
+    border-radius: 20px;
+    }
+
+  ul {
+    padding: 10px;
+    }
+  li {
+    display: inline;
+    padding: 0px 10px 0px 10px;
