@@ -1,31 +1,35 @@
 .color-info {
   border: 5px solid black;
 }
-#about_blue {
-  background-color: #6495ed;
-}
-#about_yellow {
-  background-color: #FFEBCD;
-}
-#about_blue ul li {
-  color:blue;
-}
-#about_yellow ul li {
-  color: orange;
-}
 .important {
   font-size: 16px;
   font-weight: bold;
 }
+.nav {
+  text-align: left;
+}
 .nav li {
-  background-color: red;
+  background-color: black;
   color: white;
 }
+ul.nav li {
+display: inline-block;
+padding-right: 10px;
+}
+
 header {
     text-align: center;
     background: url('./road.jpeg');
     background-size: cover;
+    height: 600px;
     color: white;
+    position: relative;
+  }
+#logo {
+  vertical-align: bottom;
+  bottom: 4%;
+  margin-left: -5%;
+  position: absolute;
   }
   a {
     color: white;
@@ -40,6 +44,7 @@ header {
 
   ul {
     padding: 10px;
+
     }
   li {
     display: inline;
