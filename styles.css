@@ -41,24 +41,21 @@ header {
     border: 7px solid white;
     border-radius: 20px;
     }
-
   ul {
     padding: 10px;
-
     }
   li {
     display: inline;
     padding: 0px 10px 0px 10px;
-  }
+    }
   .column {
-        float: left;
-        width: 25%;
-      }
-
-      p{
-      display:inline-block;
-      top:7px;
-      background:gold;
-      border-radius: 50%;
-      font-size:3em;
-      }
+    float: left;
+    width: 25%;
+    }
+  p{
+    display:inline-block;
+    top:7px;
+    background:grey;
+    border-radius: 50%;
+    font-size:3em;
+    }
