@@ -49,3 +49,16 @@ header {
   li {
     display: inline;
     padding: 0px 10px 0px 10px;
+  }
+  .column {
+        float: left;
+        width: 25%;
+      }
+
+      p{
+      display:inline-block;
+      top:7px;
+      background:gold;
+      border-radius: 50%;
+      font-size:3em;
+      }
