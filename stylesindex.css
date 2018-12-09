@@ -23,13 +23,15 @@ ul.nav li {
 
 header {
   text-align: center;
-  background: url('./road.jpeg');
-  background-size: cover;
+
   height: 600px;
   color: white;
   position: relative;
 }
-
+body {
+  background: url('./road.jpeg');
+  background-size: cover;
+}
 #logo {
   vertical-align: bottom;
   bottom: 4%;
@@ -70,10 +72,10 @@ li {
   font-size: 12px;
   padding:10% 0;
   line-height:0;
-  position:relative;
+  margin-top: 10px;
+  position: relative;
   background: gainsboro;
   color: black;
-  font-family: Helvetica, Arial Black, sans;
 }
 
 p {
