@@ -76,3 +76,7 @@ li {
     line-height: 1.3333333;
     border-radius: 6px;
 }
+#googleForm {
+  padding-top: 30px;
+  text-align: center;
+}
