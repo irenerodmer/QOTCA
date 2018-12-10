@@ -23,14 +23,13 @@ ul.nav li {
 
 header {
   text-align: center;
-
   height: 600px;
   color: white;
   position: relative;
 }
 body {
-  background: url('./road.jpeg');
-  background-size: cover;
+  background: url('./road.jpg');
+  background-size: auto;
 }
 #logo {
   vertical-align: bottom;
@@ -66,24 +65,14 @@ li {
 .column {
   float:left;
 }
-.circle{
-  width:20%;
-  border-radius:50%;
-  text-align:center;
-  font-size: 12px;
-  padding:10% 0;
-  line-height:0;
-  margin-top: 10px;
-  position: relative;
-  background: gainsboro;
-  color: black;
-}
 
-p {
-  display: inline-block;
-  font-family: 'Lobster', cursive;
-  top: 7px;
-  background: gainsboro;
-  border-radius: 50%;
-  font-size: 3em;
+.btn-lg, .btn-group-lg > .btn {
+    padding: 20px 16px;
+    margin-top: 50px;
+    font-size: 40px;
+    font-family: 'Lobster', cursive;
+    background: gainsboro;
+    color: black;
+    line-height: 1.3333333;
+    border-radius: 6px;
 }
