@@ -80,3 +80,15 @@ li {
   padding-top: 30px;
   text-align: center;
 }
+.ism-slider-wrapper {
+  text-align:center;
+}
+.ism-slider {
+  display: inline-block;
+  margin: 80px;
+}
+h1 {
+  font-family: 'Lobster', cursive;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
