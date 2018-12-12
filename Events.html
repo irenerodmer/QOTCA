@@ -3,6 +3,8 @@
 <head>
   <title>QOTCA: Events</title>
   <link href='css/bootstrap.css' rel='stylesheet'>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
   <link rel="stylesheet" type="text/css" href="stylesindex.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -18,7 +20,69 @@
 </head>
 
 <body>
+  <div class="container bg-light">
+    <div class="row">
+      <div class="col">
+    <button id="weather-button" class="btn btn-primary"><i class="fa fa-cloud" aria-hidden="true"></i> Get the weather</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+    <div id="weather-container" style="display: none;">
+      <h2>The weather in Edinburgh is <span id="weather-condition"></span></h2>
+        </div>
+      </div>
+    </div>
+  </div>
 <div id="googleForm">
 <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeCn_ClQF4cgsjcLOQ-VlnmBFLvFZ7LsIenNAPlUun9ELAHtg/viewform?embedded=true" text-align= "center" width="640" height="700" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
 </div>
+<script>
+      // The url of the API
+    const url =
+      "https://query.yahooapis.com/v1/public/yql?q=select%20item.condition.text%20from%20weather.forecast%20where%20woeid%20in%20(select%20woeid%20from%20geo.places(1)%20where%20text%3D%22Edinburgh%2C%20uk%22)&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys";
+
+    // A function to fetch the part of the API response I want.
+    const getResult = (data) => {
+      return data['query']['results']['channel']['item']['condition']['text'];
+    }
+
+    // Run this code when the weather-button is clicked
+    $("#weather-button").click(() => {
+      // if the weather-container is *not* visible
+      if (!$("#weather-container").is(':visible')) {
+        // make an ajax request to the api
+        $.ajax({
+          url: url,
+          method: "GET"
+        })
+          // if it is successful, run this function
+          .done(data => {
+            // get the text from the data response
+            const text = getResult(data);
+            // put the text into the weather-condition span element
+            $("#weather-condition").text(text);
+            // show the weather-container div
+            $("#weather-container").show();
+            // update the button to say "Clear results" with an icon
+            $("#weather-button").html('<i class="fa fa-times-circle" aria-hidden="true"></i> Clear results');
+          })
+          // if it fails, don't do anything
+          .fail(err => {
+            console.log(JSON.stringify(err));
+          });
+      } else { // If the weather-containter is not hidden (see the if statement on line 13)
+        // hide the weather-container div
+        $("#weather-container").hide();
+        // change the button to say "Get the weather" with an icon
+        $("#weather-button").html('<i class="fa fa-cloud" aria-hidden="true"></i> Get the weather');
+      }
+    });
+
+    /*
+    Docs for the API can be found here:
+    https://developer.yahoo.com/weather/
+    */
+
+</script>
 </body>
