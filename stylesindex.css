@@ -27,10 +27,12 @@ header {
   color: white;
   position: relative;
 }
+
 body {
   background: url('./road.jpg');
   background-size: auto;
 }
+
 #logo {
   vertical-align: bottom;
   bottom: 4%;
@@ -59,34 +61,40 @@ li {
   display: inline;
   padding: 0px 10px 0px 10px;
 }
+
 .row {
   text-align: center;
 }
+
 .column {
-  float:left;
+  float: left;
 }
 
-.btn-lg, .btn-group-lg > .btn {
-    padding: 20px 16px;
-    margin-top: 50px;
-    font-size: 40px;
-    font-family: 'Lobster', cursive;
-    background: gainsboro;
-    color: black;
-    line-height: 1.3333333;
-    border-radius: 6px;
+.btn-lg, .btn-group-lg>.btn {
+  padding: 20px 16px;
+  margin-top: 50px;
+  font-size: 40px;
+  font-family: 'Lobster', cursive;
+  background: gainsboro;
+  color: black;
+  line-height: 1.3333333;
+  border-radius: 6px;
 }
+
 #googleForm {
   padding-top: 30px;
   text-align: center;
 }
+
 .ism-slider-wrapper {
-  text-align:center;
+  text-align: center;
 }
+
 .ism-slider {
   display: inline-block;
   margin: 80px;
 }
+
 h1 {
   font-family: 'Lobster', cursive;
   color: white;
